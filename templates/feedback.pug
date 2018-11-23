@@ -1,0 +1,16 @@
+extends _layout/_layout.pug
+
+block var
+	- title = 'Demo - About'
+	- bodyClass = 'news-page'
+
+block header
+	include ../lib/header/h-1/index.pug
+block main
+	include ../lib/about/a-1/index.pug
+	include ../lib/breadcrumb/b-1/index.pug
+	include ../lib/support/s-1/index.pug
+	include ../lib/support/s-2/index.pug
+	include ../lib/home/h-8/index.pug
+block footer
+	include ../lib/footer/f-1/index.pug

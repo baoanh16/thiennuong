@@ -1,0 +1,83 @@
+.tn-news-details-1
+	padding: r(72px) 0
+	h1,h2
+		font-size: r(30px)
+		text-transform: uppercase
+		color: #291153
+		margin-bottom: r(14px)
+	.news-wrapper
+		time
+			font-size: r(13px)
+			color: #999999
+			margin-bottom: r(19px)
+			display: block
+		.brief
+			font-style: italic
+			color: #333333
+			font-size: r(15px)
+			margin-bottom: r(17px)
+		.content
+			font-size: r(15px)
+			color: #333333
+			h1,h2,h3,h4,h5,h6,strong,b
+				color: #291153
+				font-size: r(18px)
+			p
+				line-height: r(26px)
+			img
+				max-width: 100%
+				height: auto
+				margin: r(34px) 0
+	.news-footer
+		display: flex
+		@media (max-width: 576px)
+			flex-direction: column
+		.social-networks
+			margin-top: r(35px)
+			.fb-like
+				span 
+					vertical-align: baseline !important
+			.nav-item
+				margin-right: 0.8rem
+				@media (max-width: 576px)
+					margin-right: 0.5rem
+		.booking-button
+			margin-top: r(27px)
+			margin-left: r(31px)
+	.news-others-wrapper
+		position: sticky
+		top: 90px
+		@media (max-width: 992px)
+			margin-top: 3rem
+		.news-others-list
+			figure
+				padding: r(21px) 0
+				border-bottom: 1px solid #c5c5c5
+				display: flex
+				flex-wrap: wrap
+				.news-img
+					padding: 0
+					img
+						max-height: r(89px)
+						width: 100%
+						@media (max-width: 992px)
+							max-height: 100%
+					
+				figcaption
+					display: flex
+					flex-direction: column
+					justify-content: space-between
+					padding-right: 0
+					@media (max-width: 992px)
+						justify-content: flex-start
+					h3
+						font-size: r(14px)
+						font-weight: 500
+						color: #333333
+						+line(3)
+						@media (max-width: 992px)
+							+line(none)
+					time
+						font-size: r(13px)
+						font-weight: 300
+						font-style: italic

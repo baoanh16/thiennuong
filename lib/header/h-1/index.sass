@@ -1,0 +1,200 @@
+.overlay
+	position: fixed
+	top: 0
+	bottom: 0
+	right: 0
+	z-index: 0
+	background: #000
+	opacity: .7
+	width: 100%
+	display: none
+	&.active
+		display: block
+.canhcam-header-1
+	box-shadow: 0 2px 1px 0 rgba(0,0,0,.1)
+	top: 0
+	width: 100%
+	background: #ffffff
+	z-index: 999999
+	transition: position 3s ease-in-out
+	&.fixed
+		position: fixed
+		transition: position 3s ease-in-out
+	.header-wrapper
+		display: flex
+		align-items: center
+		width: 100%
+		background: #ffffff
+		justify-content: center
+	.nav-wrapper
+		display: flex
+		width: 100%
+		justify-content: space-between
+		.logo-wrapper
+			padding: r(11px) 0
+		.mainnav
+			.mdi
+				display: none
+			.nav
+				height: 100%
+				.nav-item
+					display: flex
+					align-items: center
+					padding: 0 r(11.5px)
+					.nav-link
+						font-size: r(14px)
+						text-transform: uppercase
+						color: #333333
+						padding: 0
+					&.active,&:hover
+						.nav-link
+							color: #ee7cb1
+					&.dropdown
+						transition: none
+						.dropdown-menu
+							font-size: r(14px)
+							text-transform: uppercase
+							border: 0
+							border-radius: 0
+							width: 100%
+							min-width: auto
+							transition: none
+							padding: 0 r(11.5px)
+							top: 70%
+							.dd-item
+								padding: 0.5rem 0
+								&:last-child
+									padding-bottom: 1.5rem
+								&.active,&:hover
+									a
+										color: #ee7cb1
+							a
+								color: #333333
+								text-decoration: none
+						&:hover
+							box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.15)
+							height: 100%
+							.dropdown-menu
+								display: block
+								box-shadow: 0px 3.5px 4px 1px rgba(0,0,0,0.15)
+	.booking-wrapper
+		margin-left: 0.5rem
+		height: 100%
+		.btn
+			height: 100%
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			background: linear-gradient( 135deg, rgb(233,126,177) 0%, rgb(198,51,144) 50%, rgb(41,20,82) 100%)
+			border-radius: 0
+			border: 0
+			max-width: r(110px)
+			span
+				font-size: r(12px)
+				font-weight: 600
+				text-transform: uppercase
+				margin-top: 0.2rem
+	+media-breakpoint-down(lg)
+		.header-wrapper
+			.nav-wrapper
+				.mainnav
+					.nav
+						.nav-item
+							padding: 0 .39rem
+							.nav-link
+								font-size: 0.75rem
+							&.dropdown
+								.dropdown-menu
+									padding: 0 .39rem
+									a
+										font-size: 0.75rem
+	+media-breakpoint-down(md)
+		.header-wrapper
+			justify-content: space-between
+			padding: 0 0.5rem 0 0
+			.toggle-header
+				border: 0
+				background-image: linear-gradient( 135deg, rgb(233,126,177) 0%, rgb(198,51,144) 50%, rgb(41,20,82) 100%)
+				color: #ffffff
+				justify-content: center
+				align-items: center
+				width: 36px
+				height: 36px
+			.nav-wrapper
+				padding: 0
+				.logo-wrapper
+					padding-left: 0.75rem
+					img
+						max-height: 2.75rem
+				.mainnav
+					position: fixed
+					top: 0
+					margin-left: 0
+					width: 300px
+					left: 0
+					height: 100%
+					background: linear-gradient(-135deg, #f4c4f3, #fc67fa)
+					display: flex
+					flex-direction: column
+					align-items: center
+					transform: translateX(-100%)
+					padding-top: 5rem
+					z-index: 2018
+					&.active
+						transform: translateX(0)
+					.mdi
+						position: absolute
+						display: block
+						top: 0
+						right: 10px
+						font-size: 2rem
+						color: #ffffff
+					.nav
+						flex-direction: column
+						justify-content: center
+						height: auto
+						padding-top: 2rem
+						.nav-item
+							margin-bottom: 1.5rem
+							padding: 0
+							.nav-link
+								font-size: 1rem
+								color: #ffffff
+								font-weight: 600
+							&.dropdown
+								display: flex
+								flex-direction: column
+								align-items: baseline
+								position: relative
+								&:after
+									+mdi('\f140')
+									position: absolute
+									top: 0
+									right: -12px
+									color: #ffffff
+								.dropdown-menu
+									padding: 0
+									background: transparent
+									position: static
+									padding-left: 1.5rem
+									.dd-item
+										&:last-child
+											padding-bottom: 0
+									a
+										font-size: 0.875rem
+										color: #ffffff
+										font-weight: 500
+										&:before
+											content: '-'
+											padding-right: 0.5rem
+								&:hover
+									box-shadow: none
+									.dropdown-menu
+										box-shadow: none
+			.booking-wrapper
+				margin-left: 0
+				display: flex
+				align-items: center
+				.btn
+					margin-right: 1rem

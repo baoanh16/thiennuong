@@ -1,0 +1,77 @@
+.canhcam-footer-1
+	padding: 2rem 0 1rem
+	.logo-footer
+		margin-bottom: 1rem
+	.menu-footer
+		padding: r(18px) 0
+		width: 100%
+		display: flex
+		justify-content: center
+		border-top: 1px solid #e5e5e5
+		border-bottom: 1px solid #e5e5e5
+		margin-bottom: r(18px)
+		.nav
+			justify-content: center
+			@media (max-width: 576px)
+				flex-direction: column
+				align-items: center
+			.nav-item
+				.nav-link
+					text-transform: uppercase
+					color: #333333
+					font-size: r(14px)
+					font-weight: 500
+	.social-list
+		width: 100%
+		display: flex
+		justify-content: center
+		margin-bottom: r(18px)
+		.nav
+			.nav-item
+				margin: 0 0.5rem
+				a
+					display: flex
+					justify-content: center
+					align-items: center
+					padding: 0
+					width: r(36px)
+					height: r(36px)
+					border-radius: 50%
+					border: 1px solid #e5e5e5
+					color: #999999
+	.contact-wrap
+		width: 100%
+		display: flex
+		justify-content: center
+		.nav
+			@media (max-width: 576px)
+				flex-direction: column
+				align-items: center
+			.nav-item
+				.nav-link
+					font-size: r(14px)
+					color: #666666
+					padding-top: 0
+					padding-bottom: 0
+				&:first-child
+					.nav-link
+						text-transform: uppercase
+				&:not(:first-child)
+					.nav-link
+						position: relative
+						z-index: -1
+						&:before
+							content: '-'
+							position: absolute
+							left: 0
+							transform: translateX(-50%)
+							@media (max-width: 576px)
+								display: none
+
+	p
+		width: 100%
+		text-align: center
+		font-size: r(13px)
+		color: #666666
+		text-transform: uppercase
+		margin-top: 0.2rem

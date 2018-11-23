@@ -1,0 +1,72 @@
+.tn-home-2
+	padding: 3rem 0
+	.home-about-text
+		.about-wrapper
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				background: url('.././img/icon/home_icon_6.png')
+				background-repeat: no-repeat
+				background-size: contain
+				background-position: center center
+				width: 118px
+				height: 120px
+				left: 50%
+				top: -20px
+				transform: translateX(-50%)
+			h1,h2,p
+				text-align: center
+			h2
+				font-size: r(18px)
+				color: #291452
+				text-transform: uppercase
+				font-weight: 600
+			h1
+				font-size: r(32px)
+				text-transform: uppercase
+				background: linear-gradient(to left, #e97eb1,#c63390,#291452)
+				-webkit-background-clip: text
+				-webkit-text-fill-color: transparent
+				font-weight: 400
+				margin: 0.5rem 0
+				
+			p
+				font-size: r(14px)
+				color: #666666
+				max-width: r(730px)
+				margin: 0 auto
+			+media-breakpoint-up(sm)
+				h1
+					font-size: r(40px)
+				p
+					font-size: r(18px)
+	.home-about-icon
+		.media
+			margin-top: r(40px)
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			.media-img
+				width: r(140px)
+				height: r(140px)
+				border-radius: 50%
+				text-align: center
+				border: solid 4px transparent
+				background-image: linear-gradient(#fff,#fff ), radial-gradient(circle at bottom right, #e97eb1,#c63390,#291452)
+				background-origin: border-box
+				background-clip: content-box, border-box
+				display: flex
+				justify-content: center
+				align-items: center
+				box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3)
+			.media-body
+				text-align: center
+				margin-top: r(27px)
+				span
+					max-width: r(240px)
+					text-transform: uppercase
+					font-size: r(15px)
+					font-weight: 600
+					color: #666666
+					display: block

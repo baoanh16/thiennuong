@@ -1,0 +1,48 @@
+block var
+
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		link(href='https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=vietnamese', rel='stylesheet')
+		link(rel="stylesheet", href="styles/core.min.css")
+		link(rel="stylesheet", href="styles/main.min.css")
+		<!-- inject:css -->
+		<!-- endinject -->
+		title #{title}
+		script.
+			(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2';
+			fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		script.
+			window.twttr = (function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0],
+			t = window.twttr || {};
+			if (d.getElementById(id)) return t;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "https://platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js, fjs);
+			t._e = [];
+			t.ready = function(f) {
+			t._e.push(f);
+			};
+			return t;
+			}(document, "script", "twitter-wjs"));
+		script(src='https://apis.google.com/js/platform.js', async='', defer='').
+			{lang: 'vi'}
+	body(class=bodyClass)
+		block header
+		main
+			block main
+		block footer
+		script(src="scripts/core.min.js")
+		script(src="scripts/main.min.js")
+		<!-- inject:js -->
+		<!-- endinject -->

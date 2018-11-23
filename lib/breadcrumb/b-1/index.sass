@@ -1,0 +1,27 @@
+.canhcam-breadcrumb-1
+	background: #ebebeb
+	.breadcrumbs-list
+		.breadcrumb
+			padding-left: 0
+			margin-bottom: 0
+			list-style-type: none
+			+pad(.5rem null)
+			background: none
+			li
+				+pad(null 20px)
+				a , span
+					+fz(r(14px))
+					+fw(400)
+					text-decoration: none
+					color: #999999
+				&:first-child
+					padding-left: 0
+				&:last-child
+					padding-right: 0
+				+ li
+					position: relative
+					&:before
+						content: '|'
+						+pad(0)
+						+pos(abs , 0 null null 0)
+						color: #999999

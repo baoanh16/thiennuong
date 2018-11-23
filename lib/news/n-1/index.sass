@@ -1,0 +1,53 @@
+.tn-news-1
+	+pad(2rem null)
+	h2
+		width: 100%
+		color: #291452
+		font-size: r(40px)
+		text-transform: uppercase
+		text-align: center
+		font-weight: 400
+		margin-bottom: r(40px)
+	.item
+		text-decoration: none
+		display: block
+		margin-bottom: 2rem
+		figure
+			.boxzoom
+				img
+					width: 100%
+			figcaption
+				+pad(1rem 1rem .875rem 1rem)
+				h4
+					color: #291452
+					+fz(r(16px))
+					margin-bottom: r(18px)
+					+fw(500)
+				p 
+					font-size: r(15px)
+					color: #404040
+				.desc
+					+line(2)
+					line-height: r(22px)
+					height: r(44px)
+					margin-bottom: r(14px)
+				.time
+					display: flex
+					border-top: 1px solid #c5c5c5
+					justify-content: space-between
+					padding: r(14px) 0 0
+					+fz(r(13px))
+					color: #999999
+					text-transform: uppercase
+	.btn-wrapper
+		margin: 0 auto
+	+media-breakpoint-up(lg)
+		.item
+			figure
+				margin-bottom: 0
+				.boxzoom
+					overflow: hidden
+					img
+						+transition(all .3s ease-in-out)
+			&:hover
+				box-shadow: 0px 0px 14px -4px rgba(0,0,0,0.4)

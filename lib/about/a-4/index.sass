@@ -1,0 +1,65 @@
+.tn-about-4
+	padding: 3rem 0
+	.item
+		display: flex
+		&:nth-child(2n-1)
+			justify-content: flex-end
+		&:nth-child(2n)
+			justify-content: flex-start
+		@media (max-width: 992px)
+			&:nth-child(2n-1)
+				justify-content: center
+			&:nth-child(2n)
+				justify-content: center
+	h2
+		font-size: r(36px)
+		background: linear-gradient(to left,#f57eb7,#291452)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		text-transform: uppercase
+		text-align: center
+		width: 100%
+		margin-bottom: r(30px)
+		@media (max-width: 576px)
+			font-size: 1.875rem
+	p
+		max-width: r(595.46px)
+		margin: 0 auto
+		text-align: center
+		
+	figure
+		width: r(440px)
+		height: r(400px)
+		display: flex
+		flex-direction: column
+		align-items: center
+		border: solid 3px transparent
+		background-image: linear-gradient(#fff,#fff ), radial-gradient(circle at bottom right, #e97eb1,#c63390,#291452)
+		background-origin: border-box
+		background-clip: content-box, border-box
+		border-radius: 10px
+		justify-content: center
+		margin-top: r(30px)
+		@media (max-width: 576px)
+			width: auto
+			height: auto
+		img
+			@media (max-width: 576px)
+				padding-top: 1rem
+		figcaption
+			max-width: r(399.91px)
+			text-align: center
+			margin: 0 auto
+			@media (max-width: 576px)
+				padding: 1.2rem
+				max-width: 100%
+			h3
+				font-size: r(18px)
+				color: #291452
+				padding: r(21px) 0 r(36px)
+			p 
+				font-size: r(15px)
+				color: #333333
+				line-height: r(26px)
+				@media (max-width: 576px)
+					text-align: justify

@@ -1,0 +1,37 @@
+header.canhcam-header-1
+	.container
+		.row
+			.overlay
+			.header-wrapper
+				.nav-wrapper
+					.logo-wrapper
+						img(src="./img/logo/logo.png", alt="").d-none.d-sm-block
+						img(src="./img/logo/logo_m.png", alt="").d-block.d-sm-none
+					.mainnav
+						span.mdi.mdi-close-box-outline.close-header
+						.logo-mobile.d-block.d-lg-none
+							img(src="./img/logo/logo.png", alt="")
+						ul.nav
+							li.nav-item.active
+								a(href="#").nav-link giới thiệu
+							li.nav-item.dropdown
+								a(href="#").nav-link sản phẩm - dịch vụ
+								ul.dropdown-menu
+									li.dd-item
+										a(href="#") sản phẩm
+									li.dd-item
+										a(href="#") dịch vụ
+							li.nav-item
+								a(href="#").nav-link thành viên
+							li.nav-item
+								a(href="#").nav-link tin tức
+							li.nav-item
+								a(href="#").nav-link hỗ trợ khách hàng
+							li.nav-item
+								a(href="#").nav-link liên hệ
+				.booking-wrapper
+					a(href="#").btn.btn-primary 
+						img(src="./img/icon/header_icon.png", alt="")
+						span đặt lịch hẹn
+					button.toggle-header.d-flex.d-lg-none
+						em.mdi.mdi-menu

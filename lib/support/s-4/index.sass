@@ -1,0 +1,56 @@
+.tn-support-4
+	padding: 2rem 0
+	.form-container
+		max-width: r(825px)
+		max-height: r(610px)
+		position: relative
+		border: 22px solid transparent
+		border-image: url('.././img/bg/faq_bg.jpg') 22 round
+		margin: 0 auto
+		padding: r(45px)
+		@media (max-width: 768px)
+			max-height: 100%
+			padding: r(25px)
+			border: 10px solid transparent
+			border-image: url('.././img/bg/faq_bg.jpg') 45 round
+		h2
+			text-transform: uppercase
+			margin-bottom: r(28px)
+			font-size: r(25px)
+			font-weight: 500
+			@media (max-width: 768px)
+				text-align: center
+		.wrap-form
+			display: flex
+			flex-wrap: wrap
+			.form-group
+				padding-left: 0
+				margin-bottom: r(28px)
+				label
+					width: 100%
+					font-style: r(15px)
+					font-weight: 500
+					color: #999999
+				input,textarea
+					width: 100%
+					height: r(45px)
+					background: #f5f5f5
+					border: 0
+					padding: 0 1rem
+					&:focus
+						outline: none
+				textarea
+					height: r(120px)
+					padding: 1rem
+					font-size: r(14px)
+			.frm-btn
+				text-align: center
+				input
+					width: r(164px)
+					height: r(41px)
+					border: 0
+					border-radius: 20.5px
+					margin: 0 auto
+					background: linear-gradient(to left,#e97eb1 0,#c63390 50%,#291452 100%)
+					text-transform: uppercase
+					color: #ffffff
