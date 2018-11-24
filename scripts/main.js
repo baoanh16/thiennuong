@@ -103,3 +103,6 @@ function adjustHeader () {
 		$('.canhcam-header-1').removeClass('fixed');
 }
 
+///Member tabs
+tabby.init()
+
