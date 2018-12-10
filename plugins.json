@@ -13,7 +13,9 @@
 		"bower_components/swiper/dist/css/swiper.min.css",
 		"bower_components/tiny-slider/dist/tiny-slider.css",
 		"bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css",
-		"bower_components/tabby/dist/css/tabby.min.css"
+		"bower_components/tabby/dist/css/tabby.min.css",
+		"bower_components/slick-carousel/slick/slick.css",
+		"bower_components/slick-carousel/slick/slick-theme.css"
 	],
 	"scripts":[
 		"bower_components/jquery/dist/jquery.min.js",
@@ -26,6 +28,7 @@
 		"bower_components/tiny-slider/dist/tiny-slider.js",
 		"bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js",
 		"bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.vi.min.js",
-		"bower_components/tabby/dist/js/tabby.min.js"
+		"bower_components/tabby/dist/js/tabby.min.js",
+		"bower_components/slick-carousel/slick/slick.min.js"
 	]
 }

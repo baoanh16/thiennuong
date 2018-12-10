@@ -2,6 +2,9 @@
 	padding: 2rem 0
 	.list-faq
 		margin-bottom: r(40px)
+		counter-reset: number
+		.btn-more
+			margin-top: 2.5rem
 		.faq-item
 			border-bottom: 1px solid #e0e0e0
 			&:first-child
@@ -10,6 +13,9 @@
 				font-size: r(30px)
 				color: #999999
 				margin-right: 4rem
+				&:before
+					counter-increment: number
+					content: counter(number)
 				@media (max-width: 576px)
 					margin-right: 2rem
 			.content
@@ -35,7 +41,7 @@
 							color: #291452
 							font-weight: 700
 				.answer
-					padding: r(25px) 0
+					padding: 0 0 1.875rem
 					display: none
 					transition: 0.3s transform ease-in-out
 					p

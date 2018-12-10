@@ -15,11 +15,23 @@ $(function () {
 		$('.canhcam-header-1 .mainnav').removeClass('active')
 		$('.overlay').removeClass('active')
 	});
-	$('.tn-support-3 .question').click(function(e){
+
+	// $('.tn-support-3 .faq-item .question').click(function(e){
+	// 	e.preventDefault();
+	// 	$(this).toggleClass('active')
+	// 	$(this).next().slideToggle()
+	// })
+
+	$("body").on("click", ".tn-support-3 .faq-item .question", function (e) {
 		e.preventDefault();
 		$(this).toggleClass('active')
 		$(this).next().slideToggle()
 	})
+
+	$('.edit-link i').remove()
+	$('.edit-link').append("<i class='fas fa-pencil-alt h5'></i>")
+
+
 
 	//Datepicker
 	$('#booking-wrapper .booking-calendar').datepicker({
@@ -30,12 +42,46 @@ $(function () {
 	//Set url for social button
 	createNewsSocial1()
 	// Run the function as the page loads, in case the user refreshes after scrolling
-    adjustHeader();
+	adjustHeader();
 
-    // Add event listener for scrolling
-    $(document).on('scroll', adjustHeader);
+	// Add event listener for scrolling
+	$(document).on('scroll', adjustHeader);
 });
 ///////////////////////// End Ready Document ///////////////////////////
+$('.small-thumbnail').slick({
+	slidesToShow: 3,
+	slidesToScroll: 1,
+	arrows: false,
+	fade: false,
+	infinite: false,
+	asNavFor: '.big-thumbnail',
+	mobileFirst: true,
+	focusOnSelect: true,
+	responsive: [
+		{
+			breakpoint: 576,
+			settings: {
+				slidesToShow: 4,
+			},
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 5,
+				vertical: true,
+				verticalSwiping: true,
+				arrows: true,
+				nextArrow: '<span class="lnr lnr-chevron-down"></span>'
+			}
+		}
+	]
+});
+
+$('.big-thumbnail').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	arrows: false,
+	fade: true,
+	asNavFor: '.small-thumbnail'
+});
 
 
 ///Slider home banner
@@ -86,7 +132,9 @@ var slider3 = tns({
 	speed: 1000,
 });
 
-// stickybits('.canhcam-header-1');
+///Slider product images
+
+
 function createNewsSocial1() {
 	var newsFullPath = document.URL
 	var newsFullPathEncode = encodeURIComponent(document.URL)
@@ -95,14 +143,54 @@ function createNewsSocial1() {
 	$('.twitter-share-button').attr('data-url', newsFullPath)
 }
 
-function adjustHeader () {
+function adjustHeader() {
 	// Check if document has scrolled at all
-	if ($(document).scrollTop() > 1 )
+	if ($(document).scrollTop() > 1)
 		$('.canhcam-header-1').addClass('fixed');
 	else
 		$('.canhcam-header-1').removeClass('fixed');
 }
 
 ///Member tabs
-tabby.init()
+try {
+	tabby.init()
+} catch (error) {
+	console.error(error)
+}
+
+
+
+//View more button
+var isLoading = false
+$("body").on("click", "a.ajaxpagerlink", function (e) {
+	e.preventDefault();
+	/*  
+	if uncomment the above line, html5 nonsupported browers won't change the url but will display the ajax content;
+	if commented, html5 nonsupported browers will reload the page to the specified link. 
+	*/
+
+	//get the link location that was clicked
+	let obj = $(this);
+	let pageurl = $(this).attr('href');
+	if (!pageurl.length) return;
+
+	//to get the ajax content and display in div with id 'content'
+	$.ajax({
+		url: pageurl,
+		data: { isajax: true },
+		success: function success(data) {
+			$('.ajaxresponse .ajaxresponsewrap').append($(data).find('.ajaxresponsewrap').html());
+			obj.remove();
+			isLoading = false
+
+		}
+	});
+	//to change the browser URL to 'pageurl'
+	// if (pageurl != window.location) {
+	// 	window.history.pushState({ path: pageurl }, '', pageurl);
+	// }
+	//window.scrollTo(0, 0);
+
+	return false;
+});
 

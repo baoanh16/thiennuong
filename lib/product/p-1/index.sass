@@ -12,6 +12,10 @@
 		.nav-item
 			&:last-child
 				margin-left: 0.5rem
+				@media (max-width: 576px)
+					margin-left: 0
+			@media (max-width: 576px)
+				width: 100%
 			.nav-link
 				background-image: linear-gradient(#fff,#fff ),linear-gradient( to left, #e97eb1,#c63390,#291452)
 				width: 335px
@@ -37,6 +41,8 @@
 					background-origin: border-box
 					margin-top: 0.5rem
 					font-size: r(15px)
+				@media (max-width: 576px)
+					width: 100%
 			&.active,&:hover
 				.nav-link
 					background-image: linear-gradient(to left, #e97eb1,#c63390,#291452),linear-gradient(to left, #e97eb1,#c63390,#291452)

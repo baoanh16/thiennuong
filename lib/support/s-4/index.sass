@@ -1,5 +1,5 @@
 .tn-support-4
-	padding: 2rem 0
+	padding: 0 0 2rem
 	.form-container
 		max-width: r(825px)
 		max-height: r(610px)
@@ -20,7 +20,7 @@
 			font-weight: 500
 			@media (max-width: 768px)
 				text-align: center
-		.wrap-form
+		.wrap-form,#ctl00_mainContent_ctl04_pnlQuestions
 			display: flex
 			flex-wrap: wrap
 			.form-group
@@ -43,6 +43,10 @@
 					height: r(120px)
 					padding: 1rem
 					font-size: r(14px)
+			.frm-btnwrap
+				width: 100%
+				.label
+					display: none
 			.frm-btn
 				text-align: center
 				input
@@ -54,3 +58,6 @@
 					background: linear-gradient(to left,#e97eb1 0,#c63390 50%,#291452 100%)
 					text-transform: uppercase
 					color: #ffffff
+					@media (max-width: 576px)
+						margin-bottom: 1.5rem
+						width: 100%

@@ -14,8 +14,13 @@
 		background: #ebebeb
 		border-radius: 5px
 		padding: r(28px) 0 0 r(36px)
+		@media (max-width: 1200px)
+			max-width: 100%
+			width: 100%
+			padding: 1rem
 		img
 			margin-bottom: r(29px)
+			max-width: 100%
 		h2,h3,h4
 			font-size: r(15px)
 			color: #666666
@@ -39,6 +44,12 @@
 				margin-right: r(20px)
 	.wrap-form
 		padding-left: 21px
+		@media (max-width: 992px)
+			padding-left: 0
+			padding-right: 0
+			margin-top: 1.5rem
+		@media (max-width: 576px)
+			padding: 0 15px
 		.wrap-contact
 			#ctl00_mainContent_ctl04_pnlSend
 				display: flex
@@ -46,6 +57,13 @@
 				.form-group 
 					width: calc(21.6325rem)
 					margin-right: 15px
+					@media (max-width: 1200px)
+						max-width: 47%
+						width: 47%
+					@media (max-width: 992px)
+						max-width: 100%
+						width: 100%
+						margin-right: 0
 					.form-control
 						height: r(40px)
 						max-width: r(346.12px)
@@ -57,6 +75,9 @@
 						&::placeholder
 							font-size: r(15px)
 							color: #666666
+						@media (max-width: 992px)
+							max-width: 100%
+							width: 100%
 					&.ct-message
 						flex: 100%
 						max-width: 100%
@@ -71,11 +92,13 @@
 							&::placeholder
 								font-size: r(15px)
 								color: #666666
+					&.ct-address
+						display: none
 					&.ct-button
 						flex: 25%
 						max-width: 100%
 						margin-bottom: 0
-						margin-top: 18px
+						margin-top: 1rem
 						.btn
 							display: flex
 							justify-content: center
@@ -85,11 +108,42 @@
 							border-radius: 20px
 							font-size: r(15px)
 							width: 180px
-							height: 45px
+							height: 40px
 							background-image: linear-gradient(#fff,#fff ),linear-gradient(#fff,#fff ),linear-gradient(to right, #e97eb1,#c63390,#291452)
 							background-origin: border-box
 							background-clip: content-box,padding-box,border-box
 							border: solid 2px transparent
 							margin-left: auto
 							@media (max-width: 576px)
-								margin-top: 1rem
+								width: 100%
+					&.ct-captcha
+						max-width: 100%
+						width: auto
+						margin-right: 0
+						flex: 70%
+						@media (max-width: 992px)
+							flex: 100%
+							width: 100%
+						label
+							display: none
+						.RadCaptcha_Default
+							display: flex
+							flex-direction: column-reverse
+						.rcRefreshImage
+							font-size: 0
+							margin: 0 1.25rem
+							&:before
+								+mdi('\f450')
+								font-size: 3rem
+								color: #666666
+						#ctl00_mainContent_ctl04_captcha_SpamProtectorPanel
+							display: flex
+							align-items: center
+							@media (max-width: 576px)
+								flex-direction: column-reverse
+							p
+								width: 100%
+							#ctl00_mainContent_ctl04_captcha_ctl01
+								display: flex
+								justify-content: space-between
+								align-items: center

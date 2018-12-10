@@ -29,6 +29,7 @@
     "swiper": "^4.4.2",
     "tiny-slider": "^2.8.8",
     "bootstrap-datepicker": "^1.8.0",
-    "tabby": "https://github.com/cferdinandi/tabby.git#^11.2.0"
+    "tabby": "https://github.com/cferdinandi/tabby.git#^11.2.0",
+    "slick-carousel": "^1.8.1"
   }
 }
